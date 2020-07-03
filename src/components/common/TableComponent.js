@@ -16,7 +16,7 @@ class TableComponent extends React.Component {
             {this.getColumns(item)}
         </tr>)
         return(
-            <Table striped bordered hover>
+            <Table striped bordered hover className="mt-3">
                 <thead>
                     <tr>
                         {tableHeaders}

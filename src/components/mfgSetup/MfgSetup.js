@@ -5,8 +5,9 @@ import machineData from '../../data/MachineData.json';
 import TableComponent from '../common/TableComponent';
 
 class MfgSetup extends React.Component {
-    render() {
-        const machineCols = [
+    constructor(props) {
+        super(props);
+        this.machineCols = [
             {displayName: "Machine Type", name: "type"}, 
             {displayName: "Shaping", name: "shaping"}, 
             {displayName: "Tuning", name: "tuning"}, 
@@ -14,22 +15,44 @@ class MfgSetup extends React.Component {
             {displayName: "Grinding", name: "grinding"}, 
             {displayName: "Schedule Maintenance", name: "maintenance"}
         ];
+
+        this.jobsCols = [
+            {displayName: "Job Type", name: "type"}, 
+            {displayName: "Shaping", name: "shaping"}, 
+            {displayName: "Tuning", name: "tuning"}, 
+            {displayName: "Milling", name: "milling"}, 
+            {displayName: "Grinding", name: "grinding"}
+        ];
+        
+        this.state= {
+            currentTab: "machine",
+            data: machineData.machines,
+            cols: this.machineCols
+        }
+    }
+    getJobs() {
+        this.setState({"currentTab": "jobs", "data": [], "cols": this.jobsCols}); //todo-get job data
+    }
+    getMachines() {
+        this.setState({"currentTab": "machine", "data": machineData.machines, "cols": this.machineCols});
+    }
+    render() {
         return(
             <div className="container">
                 <div className="row sub-header">
                     <div className="col"></div>
                     <div className="col">
                         <ButtonGroup aria-label="Action type">
-                            <Button variant="secondary">Machine</Button>
-                            <Button variant="secondary">Jobs</Button>
+                            <Button variant="secondary" className={`${this.state.currentTab==="machine" ? "active": ""}`} onClick={() => this.getMachines()}>Machine</Button>
+                            <Button variant="secondary" className={`${this.state.currentTab==="jobs" ? "active": ""}`} onClick={() => this.getJobs()}>Jobs</Button>
                         </ButtonGroup>
                     </div>
                     <div className="col">
-                        <Button variant="primary">Add Machine</Button>
+                        <Button variant="primary" className="float-right">Add Machine</Button>
                     </div>
                 </div>
             <div id="mfg-container" className="p-4">
-                <TableComponent headers={machineCols} data={machineData.machines}></TableComponent>
+                <TableComponent headers={this.state.cols} data={this.state.data}></TableComponent>
             </div>
             </div>
         )
