@@ -1,0 +1,28 @@
+{
+    "machines": [
+        {
+            "type": "Shaper",
+            "shaping": "60m",
+            "tuning": "",
+            "milling": "",
+            "grinding": "",
+            "maintenance": "" 
+        },
+        {
+            "type": "Lathe",
+            "shaping": "",
+            "tuning": "20m",
+            "milling": "",
+            "grinding": "",
+            "maintenance": "" 
+        },
+        {
+            "type": "Surface Grinders",
+            "shaping": "",
+            "tuning": "",
+            "milling": "",
+            "grinding": "14m",
+            "maintenance": "" 
+        }
+    ]
+}
