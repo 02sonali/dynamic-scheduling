@@ -5,7 +5,6 @@ class TableComponent extends React.Component {
     constructor(props) {
         super(props);
         console.log(props.headers, props.data);
-        //type: string, headers: array, data: array
     }
     getColumns(item) {
         return this.props.headers.map(header => <td key={header.name}>{item[header.name]}</td>);

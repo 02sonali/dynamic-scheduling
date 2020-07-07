@@ -1,10 +1,36 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
-function TaskBoard() {
-    return(
-        <div>
-            Task Board
-        </div>
-    )
+class TaskBoard extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const cards = ["Total Machines", " Jobs", "Completed", "Tardiness", "Earliness", "Machine Utilization", "Idle Machines"];
+        const allCards = cards.map(card => <div className="col" key={card}>
+                <div className="task-card">
+                    {card}
+                </div>
+            </div>
+        )
+        return(
+            <div className="container">
+                <div className="row sub-header">
+                    <div className="col"></div>
+                    <div className="col">
+                    </div>
+                    <div className="col">
+                        <Button variant="primary" className="float-right">Start Production</Button>
+                    </div>
+                </div>
+                <div id="mfg-container" className="p-4">
+                    <div className="row">
+                        {allCards}
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
 export default TaskBoard;

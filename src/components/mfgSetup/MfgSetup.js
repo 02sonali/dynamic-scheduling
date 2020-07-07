@@ -1,7 +1,8 @@
 import React from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
-import machineData from '../../data/MachineData.json';
+import machineData from '../../data/machine_data.json';
+import jobData from '../../data/job_data.json';
 import TableComponent from '../common/TableComponent';
 
 class MfgSetup extends React.Component {
@@ -10,7 +11,7 @@ class MfgSetup extends React.Component {
         this.machineCols = [
             {displayName: "Machine Type", name: "type"}, 
             {displayName: "Shaping", name: "shaping"}, 
-            {displayName: "Tuning", name: "tuning"}, 
+            {displayName: "Turning", name: "turning"}, 
             {displayName: "Milling", name: "milling"}, 
             {displayName: "Grinding", name: "grinding"}, 
             {displayName: "Schedule Maintenance", name: "maintenance"}
@@ -19,22 +20,22 @@ class MfgSetup extends React.Component {
         this.jobsCols = [
             {displayName: "Job Type", name: "type"}, 
             {displayName: "Shaping", name: "shaping"}, 
-            {displayName: "Tuning", name: "tuning"}, 
+            {displayName: "Turning", name: "turning"}, 
             {displayName: "Milling", name: "milling"}, 
             {displayName: "Grinding", name: "grinding"}
         ];
         
         this.state= {
             currentTab: "machine",
-            data: machineData.machines,
+            data: machineData,
             cols: this.machineCols
         }
     }
     getJobs() {
-        this.setState({"currentTab": "jobs", "data": [], "cols": this.jobsCols}); //todo-get job data
+        this.setState({"currentTab": "jobs", "data": jobData, "cols": this.jobsCols}); //todo-get job data
     }
     getMachines() {
-        this.setState({"currentTab": "machine", "data": machineData.machines, "cols": this.machineCols});
+        this.setState({"currentTab": "machine", "data": machineData, "cols": this.machineCols});
     }
     render() {
         return(
@@ -48,12 +49,12 @@ class MfgSetup extends React.Component {
                         </ButtonGroup>
                     </div>
                     <div className="col">
-                        <Button variant="primary" className="float-right">Add Machine</Button>
+                        {/* <Button variant="primary" className="float-right">Add Machine</Button> */}
                     </div>
                 </div>
-            <div id="mfg-container" className="p-4">
-                <TableComponent headers={this.state.cols} data={this.state.data}></TableComponent>
-            </div>
+                <div id="mfg-container" className="p-4">
+                    <TableComponent headers={this.state.cols} data={this.state.data}></TableComponent>
+                </div>
             </div>
         )
     }

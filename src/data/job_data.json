@@ -1,0 +1,44 @@
+[
+    {
+        "type": "Nut ",
+        "shaping": 0,
+        "turning": 1,
+        "milling": 0,
+        "grinding": 0
+    },
+    {
+        "type": "Bolt",
+        "shaping": 0,
+        "turning": 1,
+        "milling": 0,
+        "grinding": 0
+    },
+    {
+        "type": "Gear",
+        "shaping": 1,
+        "turning": 1,
+        "milling": 1,
+        "grinding": 1
+    },
+    {
+        "type": "Hexagonal Gear",
+        "shaping": 1,
+        "turning": 1,
+        "milling": 1,
+        "grinding": 1
+    },
+    {
+        "type": "Universal Coupling",
+        "shaping": 1,
+        "turning": 1,
+        "milling": 1,
+        "grinding": 0
+    },
+    {
+        "type": "Sprocket",
+        "shaping": 0,
+        "turning": 0,
+        "milling": 1,
+        "grinding": 1
+    }
+]

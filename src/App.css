@@ -17,3 +17,16 @@ a:hover{
   border-width: thin;
   padding: 5.2px;
 }
+
+.task-card{
+  border: 1px solid;
+  border-radius: 4px;
+  height: 4em;
+  font-size: 12px;
+  padding: 8px 4px;
+}
+
+.active .list-group-item{
+  background-color: #0062cc;
+  color: #ffffff;
+}
