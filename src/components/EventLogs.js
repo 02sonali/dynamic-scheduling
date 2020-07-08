@@ -42,7 +42,7 @@ class EventLogs extends React.Component {
                         </ButtonGroup>
                     </div>
                     <div className="col">
-                        <Button variant="primary" className="float-right">Download Log Report</Button>
+                        <Button variant="success" className="float-right">Download Log Report</Button>
                     </div>
                 </div>
                 <div id="event-container" className="p-4">

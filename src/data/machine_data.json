@@ -1,7 +1,7 @@
 [
     {
         "type": "Shaper",
-        "shaping": 50.0,
+        "shaping": "50 m",
         "turning": null,
         "milling": null,
         "grinding": null,
@@ -9,7 +9,7 @@
     },
     {
         "type": "Shaper(new)",
-        "shaping": 40.0,
+        "shaping": "40 m",
         "turning": null,
         "milling": null,
         "grinding": null,
@@ -18,7 +18,7 @@
     {
         "type": "Lathe",
         "shaping": null,
-        "turning": "19",
+        "turning": "19 m",
         "milling": null,
         "grinding": null,
         "maintenance": "1:00 pm - 1:30 pm"
@@ -27,7 +27,7 @@
         "type": "Knee Mills",
         "shaping": null,
         "turning": null,
-        "milling": 25.0,
+        "milling": "25 m",
         "grinding": null,
         "maintenance": "3:00 pm - 3:20 pm"
     },
@@ -36,22 +36,22 @@
         "shaping": null,
         "turning": null,
         "milling": null,
-        "grinding": 4.0,
+        "grinding": "4 m",
         "maintenance": "5:00 pm - 5:10 pm"
     },
     {
         "type": "Machine Centers",
         "shaping": null,
-        "turning": "17",
-        "milling": 30.0,
-        "grinding": 6.0,
+        "turning": "17 m",
+        "milling": "30 m",
+        "grinding": "6 m",
         "maintenance": "6:00 pm - 6:10 pm"
     },
     {
         "type": "Multi Tasking Machine",
         "shaping": null,
-        "turning": "16",
-        "milling": 20.0,
+        "turning": "16 m",
+        "milling": "20 m",
         "grinding": null,
         "maintenance": "8:00 pm - 8:20 pm"
     }

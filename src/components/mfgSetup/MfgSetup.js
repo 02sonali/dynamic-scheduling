@@ -14,7 +14,7 @@ class MfgSetup extends React.Component {
             {displayName: "Turning", name: "turning"}, 
             {displayName: "Milling", name: "milling"}, 
             {displayName: "Grinding", name: "grinding"}, 
-            {displayName: "Schedule Maintenance", name: "maintenance"}
+            {displayName: "Schedule Maintenance (Daily)", name: "maintenance"}
         ];
 
         this.jobsCols = [
@@ -44,16 +44,16 @@ class MfgSetup extends React.Component {
                     <div className="col"></div>
                     <div className="col">
                         <ButtonGroup aria-label="Action type">
-                            <Button variant="secondary" className={`${this.state.currentTab==="machine" ? "active": ""}`} onClick={() => this.getMachines()}>Machine</Button>
-                            <Button variant="secondary" className={`${this.state.currentTab==="jobs" ? "active": ""}`} onClick={() => this.getJobs()}>Jobs</Button>
+                            <Button variant="success" className={`${this.state.currentTab==="machine" ? "active": ""}`} onClick={() => this.getMachines()}>Machine</Button>
+                            <Button variant="success" className={`${this.state.currentTab==="jobs" ? "active": ""}`} onClick={() => this.getJobs()}>Jobs</Button>
                         </ButtonGroup>
                     </div>
                     <div className="col">
-                        {/* <Button variant="primary" className="float-right">Add Machine</Button> */}
+                        {/* <Button variant="success" className="float-right">Add Machine</Button> */}
                     </div>
                 </div>
                 <div id="mfg-container" className="p-4">
-                    <TableComponent headers={this.state.cols} data={this.state.data}></TableComponent>
+                    <TableComponent headers={this.state.cols} data={this.state.data} type={this.state.currentTab ==="machine" ? "normal" : "tick"}></TableComponent>
                 </div>
             </div>
         )

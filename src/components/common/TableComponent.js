@@ -4,10 +4,12 @@ import Table from 'react-bootstrap/Table';
 class TableComponent extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props.headers, props.data);
     }
     getColumns(item) {
-        return this.props.headers.map(header => <td key={header.name}>{item[header.name]}</td>);
+        return this.props.headers.map(header => <td key={header.name}>
+                {(this.props.type==="tick" && header.name !== "type") ? <div> {item[header.name]===0 ? <span className="text-danger">&#10006;</span> : <span className="text-success">&#10004;</span>}</div> : item[header.name]}
+            </td>
+        );
     }
     render() {
         const tableHeaders = this.props.headers.map(header => <th key={header.name}>{header.displayName}</th>);
@@ -15,7 +17,7 @@ class TableComponent extends React.Component {
             {this.getColumns(item)}
         </tr>)
         return(
-            <Table striped bordered hover className="mt-3">
+            <Table striped bordered variant="light" className="mt-3">
                 <thead>
                     <tr>
                         {tableHeaders}

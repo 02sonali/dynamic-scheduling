@@ -1,0 +1,45 @@
+
+/* left-menu */
+.left-menu-container{
+    width: 13em;
+    height: 90vh;
+    position: fixed;
+    top: 56px;
+    background-color: #ffffff;
+    box-shadow: 0.5px 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/*Main container */
+#page-content-wrapper{
+    margin-top: 56px;
+    margin-left: 13em;
+}
+
+.sub-header{
+    padding: 5.2px;
+}
+
+/** page-wise css **/
+.task-card{
+    border: 1px solid;
+    border-radius: 4px;
+    height: 4em;
+    font-size: 12px;
+    padding: 8px 4px;
+}
+  
+.job-type-color:after{
+    content:"\A";
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background: #b83b3b;
+    display:inline-block;
+    margin:0 10px;
+}
+  
+.job-color-container{
+    width: 70%;
+}
+
+  

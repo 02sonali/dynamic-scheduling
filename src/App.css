@@ -12,21 +12,16 @@ a:hover{
   text-decoration: none;
 }
 
-.sub-header{
-  border-bottom: 1px solid;
-  border-width: thin;
-  padding: 5.2px;
+.bg-dark{
+  background-color: #181B57 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.13);
 }
 
-.task-card{
-  border: 1px solid;
-  border-radius: 4px;
-  height: 4em;
-  font-size: 12px;
-  padding: 8px 4px;
+.list-group, .list-group-item{
+  border-radius: 0px !important;
 }
 
 .active .list-group-item{
-  background-color: #0062cc;
+  background-color: #1e7e34;
   color: #ffffff;
 }
