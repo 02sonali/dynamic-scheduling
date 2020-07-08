@@ -1,58 +1,72 @@
 [
     {
         "type": "Shaper",
+        "id": "M01",
         "shaping": "50 m",
         "turning": null,
         "milling": null,
         "grinding": null,
-        "maintenance": "10:00 am - 10:10 am"
+        "maintenance": "10:00 am - 10:10 am",
+        "referenceColor": "yellow"
     },
     {
         "type": "Shaper(new)",
+        "id": "M02",
         "shaping": "40 m",
         "turning": null,
         "milling": null,
         "grinding": null,
-        "maintenance": "12:00 pm - 12:10 pm"
+        "maintenance": "12:00 pm - 12:10 pm",
+        "referenceColor": "green"
     },
     {
         "type": "Lathe",
+        "id": "M03",
         "shaping": null,
         "turning": "19 m",
         "milling": null,
         "grinding": null,
-        "maintenance": "1:00 pm - 1:30 pm"
+        "maintenance": "1:00 pm - 1:30 pm",
+        "referenceColor": "blue"
     },
     {
         "type": "Knee Mills",
+        "id": "M04",
         "shaping": null,
         "turning": null,
         "milling": "25 m",
         "grinding": null,
-        "maintenance": "3:00 pm - 3:20 pm"
+        "maintenance": "3:00 pm - 3:20 pm",
+        "referenceColor": "pink"
     },
     {
         "type": "Surface Grinders",
+        "id": "M05",
         "shaping": null,
         "turning": null,
         "milling": null,
         "grinding": "4 m",
-        "maintenance": "5:00 pm - 5:10 pm"
+        "maintenance": "5:00 pm - 5:10 pm",
+        "referenceColor": "orange"
     },
     {
         "type": "Machine Centers",
+        "id": "M06",
         "shaping": null,
         "turning": "17 m",
         "milling": "30 m",
         "grinding": "6 m",
-        "maintenance": "6:00 pm - 6:10 pm"
+        "maintenance": "6:00 pm - 6:10 pm",
+        "referenceColor": "brown"
     },
     {
         "type": "Multi Tasking Machine",
+        "id": "M07",
         "shaping": null,
         "turning": "16 m",
         "milling": "20 m",
         "grinding": null,
-        "maintenance": "8:00 pm - 8:20 pm"
+        "maintenance": "8:00 pm - 8:20 pm",
+        "referenceColor": "grey"
     }
 ]

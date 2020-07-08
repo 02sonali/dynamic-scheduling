@@ -44,7 +44,7 @@ class MfgSetup extends React.Component {
                     <div className="col"></div>
                     <div className="col">
                         <ButtonGroup aria-label="Action type">
-                            <Button variant="success" className={`${this.state.currentTab==="machine" ? "active": ""}`} onClick={() => this.getMachines()}>Machine</Button>
+                            <Button variant="success" className={`${this.state.currentTab==="machine" ? "active": ""}`} onClick={() => this.getMachines()}>Machines</Button>
                             <Button variant="success" className={`${this.state.currentTab==="jobs" ? "active": ""}`} onClick={() => this.getJobs()}>Jobs</Button>
                         </ButtonGroup>
                     </div>
