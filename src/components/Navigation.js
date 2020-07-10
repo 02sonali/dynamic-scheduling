@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import logo from '../nagarro_icon.png';
 
 function Navigation() {
     return(
@@ -9,7 +10,7 @@ function Navigation() {
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text>
-                    Nagarro
+                    <img src={logo} className="justify-content-end logo"/>
                 </Navbar.Text>
                 </Navbar.Collapse>
             </Navbar>

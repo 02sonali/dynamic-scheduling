@@ -26,6 +26,7 @@
     height: 4em;
     font-size: 12px;
     padding: 8px 4px;
+    background: #ffffff;
 }
   
 .job-type-color:after{
@@ -37,9 +38,36 @@
     display:inline-block;
     margin:0 10px;
 }
+.job-type-color[color="yellow"]:after {
+    background: yellow;
+}
+.job-type-color[color="grey"]:after {
+    background: grey;
+}
+.job-type-color[color="purple"]:after {
+    background: plum;
+}
+.job-type-color[color="orange"]:after {
+    background: orange;
+}
+.job-type-color[color="blue"]:after {
+    background: skyblue;
+}
   
 .job-color-container{
     width: 70%;
+}
+
+.fullscreen-btn{
+    padding: 2px 4px;
+    font-size: 12px;
+}
+.fullscreen-btn:fullscreen{
+    display: none;
+}
+
+.chart-container:fullscreen{
+    background-color: #ffffff;
 }
 
   

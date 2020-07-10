@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-// import GanttChart from './common/ganttChart/GanttChart';
 import GanttTimeline from './common/ganttChart/GanttTimeline';
 class TaskBoard extends React.Component {
     constructor(props) {
@@ -9,16 +8,16 @@ class TaskBoard extends React.Component {
 
     render() {
         const cards = ["Total Machines", " Jobs", "Completed", "Tardiness", "Earliness", "Machine Utilization", "Idle Machines"];
-        const jobTypes = ["Shaping", "Turning", "Milling", "Grinding", "Breakdown"];
+        const jobTypes = [{type:"Shaping", color: "yellow"}, {type:"Turning", color: "purple"}, {type:"Milling", color: "orange"}, {type: "Grinding", color: "blue"}, {type:"Breakdown", color: "grey"}];
         const allCards = cards.map(card => <div className="col" key={card}>
                 <div className="task-card">
                     {card}
                 </div>
             </div>
         )
-        const allJobs = jobTypes.map(job => <div className="col" key={job}>
-                <div className="job-type-color">
-                    {job}
+        const allJobs = jobTypes.map(job => <div className="col" key={job.type}>
+                <div className="job-type-color" color={job.color}>
+                    {job.type}
                 </div>
             </div>
         )
@@ -41,10 +40,7 @@ class TaskBoard extends React.Component {
                             {allJobs}
                         </div>
                     </div>
-                    <div className="p-3">
-                        {/* <GanttChart/> */}
-                        <GanttTimeline/>
-                    </div>
+                    <GanttTimeline/>
                 </div>
             </div>
         )

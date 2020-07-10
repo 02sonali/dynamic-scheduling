@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
-import './css/pageStructure.css';
+import './pageStructure.css';
 import Navigation from './components/Navigation';
 import LeftMenu from './components/LeftMenu';
 import MainContainer from './components/MainContainer';

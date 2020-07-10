@@ -36,9 +36,9 @@ class EventLogs extends React.Component {
                     <div className="col"></div>
                     <div className="col">
                         <ButtonGroup aria-label="Action type">
-                            <Button variant="secondary" className={`${this.state.currentTab==="day" ? "active": ""}`} onClick={() => this.getDayData()}>Day</Button>
-                            <Button variant="secondary" className={`${this.state.currentTab==="week" ? "active": ""}`} onClick={() => this.getWeekData()}>Week</Button>
-                            <Button variant="secondary" className={`${this.state.currentTab==="month" ? "active": ""}`} onClick={() => this.getMonthData()}>Month</Button>
+                            <Button variant="success" className={`${this.state.currentTab==="day" ? "active": ""}`} onClick={() => this.getDayData()}>Day</Button>
+                            <Button variant="success" className={`${this.state.currentTab==="week" ? "active": ""}`} onClick={() => this.getWeekData()}>Week</Button>
+                            <Button variant="success" className={`${this.state.currentTab==="month" ? "active": ""}`} onClick={() => this.getMonthData()}>Month</Button>
                         </ButtonGroup>
                     </div>
                     <div className="col">

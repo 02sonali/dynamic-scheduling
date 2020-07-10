@@ -24,7 +24,7 @@ var keys = {
 export default class App extends Component {
   constructor(props) {
     super(props);
-
+    this.ref = React.createRef();
     const { groups, items } = generateFakeData();
     const defaultTimeStart = moment()
       .startOf("day")
@@ -40,6 +40,10 @@ export default class App extends Component {
       defaultTimeStart,
       defaultTimeEnd
     };
+  }
+
+  enterFullScreen(){
+    console.log(this.ref.current.requestFullscreen());
   }
 
   itemRenderer = ({ item, timelineContext, itemContext, getItemProps, getResizeProps }) => {
@@ -124,7 +128,11 @@ export default class App extends Component {
     const { groups, items, defaultTimeStart, defaultTimeEnd } = this.state;
 
     return (
-        <Timeline
+      <div>
+        <button className="btn btn-secondary float-right fullscreen-btn mr-4" onClick={() => this.enterFullScreen()}>View Fullscreen</button>
+        <div className="chart-container p-4" ref={this.ref}>
+        
+          <Timeline
             groups={groups}
             items={items}
             keys={keys}
@@ -146,18 +154,22 @@ export default class App extends Component {
             <TimelineHeaders>
                 <SidebarHeader>
                 {({ getRootProps }) => {
-                    return <div {...getRootProps()}>Machines</div>
+                    return <div className="rct-dateHeader-primary pt-2" {...getRootProps()}>Machines</div>
                 }}
                 </SidebarHeader>
                 <SidebarHeader variant="right" headerData={{someData: 'extra'}}>
                 {({ getRootProps, data }) => {
-                    return <div {...getRootProps()}>ID</div>
+                    return <div className="rct-dateHeader-primary pt-2" {...getRootProps()}>
+                      ID
+                    </div>
                 }}
                 </SidebarHeader>
                 <DateHeader unit="primaryHeader" />
                 <DateHeader />
             </TimelineHeaders>
         </Timeline>
+      </div>
+      </div>
     );
   }
 }
