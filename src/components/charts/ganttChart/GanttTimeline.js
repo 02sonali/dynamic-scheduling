@@ -21,7 +21,7 @@ var keys = {
   groupLabelKey: "title"
 };
 
-export default class App extends Component {
+export default class GanttTimeline extends Component {
   constructor(props) {
     super(props);
     this.ref = React.createRef();
@@ -136,8 +136,6 @@ export default class App extends Component {
             groups={groups}
             items={items}
             keys={keys}
-            rightSidebarWidth={60}
-            rightSidebarContent={<div>Above The Right</div>}
             sidebarContent={<div className='text-success'>Above the Left</div>}
             itemTouchSendsClick={false}
             stackItems
@@ -154,14 +152,7 @@ export default class App extends Component {
             <TimelineHeaders>
                 <SidebarHeader>
                 {({ getRootProps }) => {
-                    return <div className="rct-dateHeader-primary pt-2" {...getRootProps()}>Machines</div>
-                }}
-                </SidebarHeader>
-                <SidebarHeader variant="right" headerData={{someData: 'extra'}}>
-                {({ getRootProps, data }) => {
-                    return <div className="rct-dateHeader-primary pt-2" {...getRootProps()}>
-                      ID
-                    </div>
+                    return <div className="rct-dateHeader-primary pt-2" {...getRootProps()}>Machines - ID</div>
                 }}
                 </SidebarHeader>
                 <DateHeader unit="primaryHeader" />

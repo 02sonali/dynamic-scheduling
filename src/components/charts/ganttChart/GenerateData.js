@@ -9,8 +9,7 @@ export default function(itemCount = 1000, daysInPast = 30) {
   for (let i = 0; i < machineData.length; i++) {
     groups.push({
       id: `${i + 1}`,
-      title: machineData[i].type,
-      rightTitle: machineData[i].id,
+      title: machineData[i].type + '\n' + machineData[i].id ,
       bgColor: machineData[i].referenceColor
     });
   }

@@ -1,23 +1,24 @@
 import React from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
-// import TableComponent from './common/TableComponent';
+import TableComponent from './common/TableComponent';
 
 class EventLogs extends React.Component {
     constructor(props) {
         super(props);
         this.cols = [
-            {displayName: "Machine Type", name: "type"}, 
-            {displayName: "Shaping", name: "shaping"}, 
-            {displayName: "Tuning", name: "tuning"}, 
-            {displayName: "Milling", name: "milling"}, 
-            {displayName: "Grinding", name: "grinding"}, 
-            {displayName: "Schedule Maintenance", name: "maintenance"}
+            {displayName: "Event Type", name: "eventType"}, 
+            {displayName: "Job Type", name: "jobType"}, 
+            {displayName: "Job ID", name: "jobId"}, 
+            {displayName: "Machine Type", name: "machineType"}, 
+            {displayName: "Machine ID", name: "machineId"}, 
+            {displayName: "Priority", name: "priority"},
+            {displayName: "Event Date & Time", name: "eventTime"}
         ];
         
         this.state= {
             currentTab: "day",
-            cols: this.cols
+            data: []
         }
     }
     getDayData() {
@@ -46,7 +47,7 @@ class EventLogs extends React.Component {
                     </div>
                 </div>
                 <div id="event-container" className="p-4">
-                    {/* <TableComponent headers={this.state.cols} data={this.state.data}></TableComponent> */}
+                    <TableComponent headers={this.cols} data={this.state.data}></TableComponent>
                 </div>
             </div>
         )
