@@ -2,9 +2,6 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 
 class TableComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     getColumns(item) {
         return this.props.headers.map(header => <td key={header.name}>
                 {(this.props.type==="tick" && header.name !== "type") ? <div> {item[header.name]===0 ? <span className="text-danger">&#10006;</span> : <span className="text-success">&#10004;</span>}</div> : item[header.name]}
